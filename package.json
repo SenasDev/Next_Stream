@@ -1,0 +1,19 @@
+{
+  "name": "next-stream",
+  "version": "1.0.0",
+  "description": "Buscador recomendador de películas y series",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run start",
+    "client": "cd client && npm run start"
+  },
+  "author": "SenasDev",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}

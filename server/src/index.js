@@ -1,16 +1,22 @@
 require('dotenv').config();
-console.log("Variables de entorno:", process.env); // Cargar las variables de entorno desde .env
 const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet'); // Para mejorar la seguridad
 const app = express();
-const movieRoutes = require('./routes/movieRoutes'); // Importamos el router
+const searchRoutes = require('./routes/searchRoutes');
 
-const PORT = process.env.PORT || 5001; // Puerto para el servidor
+const PORT = process.env.PORT || 5001;
 
-// Middleware para parsear el cuerpo de las peticiones
-app.use(express.json()); 
+// Habilitar CORS para permitir solicitudes desde el frontend
+app.use(cors());
+
+// Mejorar la seguridad con helmet
+app.use(helmet());
+
+app.use(express.json());
 
 // Ruta para la API de películas
-app.use('/api/movies', movieRoutes);  
+app.use('/api', searchRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor iniciado en el puerto ${PORT}`);
