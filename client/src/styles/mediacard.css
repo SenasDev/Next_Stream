@@ -1,0 +1,114 @@
+.search-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.media-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.media-card {
+  display: flex;
+  margin: 16px;
+  border: 2px solid #1f2228;
+  padding: 10px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1000px;
+  align-items: center;
+}
+
+.media-poster {
+  width: 100px;
+  height: 150px; 
+  object-fit: cover; 
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.media-info {
+  flex: 1;
+}
+
+.media-overview {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.media-rating {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f0ad4e; 
+}
+
+a {
+  color: inherit; 
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: #f0ad4e; 
+  transform: scale(1.05); 
+}
+
+.read-more-button {
+  background-color: transparent;
+  border: none;
+  color: #f0ac4e76;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+}
+
+.read-more-button:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para la página de detalles */
+.media-details {
+  display: flex;         
+  gap: 20px;            
+  margin: 20px; /* Agregar margen al contenedor principal */
+  padding: 20px; /* Agregar padding al contenedor principal */
+  border-radius: 10px; /* Agregar border-radius al contenedor principal */
+  background-color: #1f2228; /* Agregar un fondo suave */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agregar una sombra sutil */
+}
+
+.poster {
+  flex: 0 0 300px;     
+}
+
+.poster img {
+  width: 100%;          
+  border-radius: 10px;  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.info {
+  flex: 1;             
+}
+
+.rating {
+  margin-bottom: 10px;  
+  font-size: 1.2em;    
+}
+
+.providers {
+  margin-top: 20px;    
+}
+
+.providers-logos {
+  display: grid;        
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); 
+  gap: 10px;
+}
+
+.providers-logos img:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
