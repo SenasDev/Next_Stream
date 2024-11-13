@@ -1,11 +1,15 @@
 import React from 'react';
-import MediaCard from '../ui/MediaCard'; // Importar el componente MovieCard
+import MediaCard from '../ui/MediaCard';
 import '../../styles/mediacard.css';
+
 function SearchResults({ results }) {
+  // Ordenamos los resultados por la nota (vote_average) de mayor a menor
+  const sortedResults = [...results].sort((a, b) => b.vote_average - a.vote_average);
+
   return (
-    <div className="search-results"> {/* Añadir un contenedor para los resultados */}
-      {results.map((result) => (
-        <MediaCard key={result.id} media={result} /> // Renderizar MovieCard para cada resultado
+    <div className="search-results">
+      {sortedResults.map((result) => (
+        <MediaCard key={result.id} media={result} />
       ))}
     </div>
   );
