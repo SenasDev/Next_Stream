@@ -4,9 +4,9 @@ const API_KEY = process.env.TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 /**
- * Controlador para buscar películas, series y personas.
+ * Controlador para buscar películas, series...
  */
-exports.searchMovies = async (req, res) => {
+exports.searchMedia = async (req, res) => {
   const query = req.query.q;
   const type = req.query.type;
 
@@ -16,7 +16,7 @@ exports.searchMovies = async (req, res) => {
         api_key: API_KEY,
         query,
         include_adult: false,
-        language: 'es-ES'
+        language: 'es-ES,en-US'
       }
     });
 
@@ -25,6 +25,7 @@ exports.searchMovies = async (req, res) => {
       const validTypes = ['movie', 'tv', 'person'];
       results = results.filter(result => result.media_type === type);
     }
+    
 
     res.json(results);
     console.log('OK: Petición a la API de TMDb exitosa');

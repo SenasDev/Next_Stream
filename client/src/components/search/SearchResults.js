@@ -3,7 +3,6 @@ import MediaCard from '../ui/MediaCard';
 import '../../styles/mediacard.css';
 
 function SearchResults({ results }) {
-  // Ordenamos los resultados por la nota (vote_average) de mayor a menor
   const sortedResults = [...results].sort((a, b) => b.vote_average - a.vote_average);
 
   return (

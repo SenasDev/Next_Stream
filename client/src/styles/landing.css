@@ -15,8 +15,11 @@
 }
 
 .landing-header {
-  background-color: #282c34; /* Color de fondo */
   min-height: 100vh;
+  background-color: #1b1e24; /* Color de fondo */
+  background-image: radial-gradient(at 80% 100%, hsl(220, 13%, 18%) 0px, transparent 50%),
+                    radial-gradient(at 1% 1%, hsl(217, 46%, 12%) 0px,
+                     transparent 50%) !important;
   display: flex;
   flex-direction: column;
   align-items: center;

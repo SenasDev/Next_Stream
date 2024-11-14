@@ -12,7 +12,7 @@ function SearchFilters({ onFilterChange }) {
     <div>
       <label htmlFor="type">Tipo de contenido:</label>
       <select id="type" value={selectedType} onChange={handleTypeChange}>
-        <option value="">Todos</option>
+        <option value="all">Todos</option>
         <option value="movie">Película</option>
         <option value="tv">Serie</option>
       </select>

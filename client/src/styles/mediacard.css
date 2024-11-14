@@ -13,14 +13,14 @@
 .media-card {
   display: flex;
   margin: 16px;
-  border: 2px solid #1f2228;
+  border: 2px solid #14161a;
   padding: 10px;
   border-radius: 16px;
   width: 90%;
   max-width: 1000px;
   align-items: center;
+  box-shadow: #14161a 10px 10px 6px -1px;
 }
-
 .media-poster {
   width: 100px;
   height: 150px; 
@@ -75,8 +75,9 @@ a:hover {
   margin: 20px; /* Agregar margen al contenedor principal */
   padding: 20px; /* Agregar padding al contenedor principal */
   border-radius: 10px; /* Agregar border-radius al contenedor principal */
-  background-color: #1f2228; /* Agregar un fondo suave */
+  background-color: #1b1e24; /* Agregar un fondo suave */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agregar una sombra sutil */
+  box-shadow: #14161a 10px 10px 6px -1px;
 }
 
 .poster {
